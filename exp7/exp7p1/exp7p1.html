@@ -36,10 +36,8 @@ th, td {
 			<p style="text-align:center;color:rgb(26, 0, 97)"> INSTRUCTION</p>
 			<div class="dropdown-content" style="background-color:white;  border:1px solid #3385ff;" >
 				<ol type="1">
-					<li>Apply \(V_{CC}\) and low level voltage to ground(GND)</li>
-					<li>Apply high level voltage to Strobe1G or strobe 2G. If STROBE 1G is high 2nd Multiplexer is activated . If STROBE 2G is high then 1st Multiplexer is activated.</li>
-					<li>For all the combinations of the select inputs A,B verify that both the LEDs are ON or not.</li>
-                    <li>Follow the truth table in the below section.</li>
+					<li>Apply high to  \(V_{CC}\) and low  voltage to ground(GND)</li>
+					<li>For all the combinations of the  4 bit inputs A ( \(A_3 A_2 A_1 A_0\)),B ( \(B_3 B_2 B_1 B_0\)) verify that the LEDs are ON or not.</li>
 					<li><b>Note</b>: Red button symbolize as Low (L), Green button symbolize as High(H).</li>
 					
 				</ol> 
@@ -66,108 +64,10 @@ th, td {
 			
 			<div class="intbl" style="background-color:white; border:1px solid #3385ff;">
 			<center>
-			<table id = "mytable" >
+			<table id = "mytable" style="overflow-y: auto;" >
 		<!--caption><b>Truth Table</b></caption-->
-		<tr> 
-			<th colspan="5">Multiplxer 1 is active</th>
-			<th></th>
-			<th></th>
-			<th colspan="6">Multiplxer 2 is active</th>
-
-			
-		</tr>
-		<tr>
-		
-		<th colspan="2">Strobe </th>
-		<th colspan="2">Select Lines </th>
-        <th>Output</th>
-		<th rowspan="8"> </th>
-		<th rowspan="8"> </th>
-		<th colspan="2">Strobe </th>
-		<th colspan="2">Select Lines </th>
-        <th>Output</th>
-		<!--th>Outputs (abcdefg)</th-->
-	</tr>
-	<tr>
-		<td>1G</td>
-		<td>2G</td>
-		<td>A</td>
-		<td>B</td>
-		<td>1Y</td>
-
-		<td>1G</td>
-		<td>2G</td>
-		<td>A</td>
-		<td>B</td>
-		<td>2Y</td>
-	</tr>
-	<tr>
-		<td>1</td>
-		<td>1</td>
-		<td>x</td>
-		<td>x</td>
-		<td>0</td>
-
-		<td>1</td>
-		<td>1</td>
-		<td>x</td>
-		<td>x</td>
-		<td>0</td>
-	</tr>
-	<tr>
-		<td>0</td>
-		<td>1</td>
-		<td>0</td>
-		<td>0</td>
-		<td>1C0</td>
-
-		<td>1</td>
-		<td>0</td>
-		<td>0</td>
-		<td>0</td>
-		<td>2C0</td>
-	</tr>
-	<tr>
-		<td>0</td>
-		<td>1</td>
-		<td>0</td>
-		<td>1</td>
-		<td>1C1</td>
-
-		<td>1</td>
-		<td>0</td>
-		<td>0</td>
-		<td>1</td>
-		<td>2C1</td>
-	</tr>
-	<tr>
-		<td>0</td>
-		<td>1</td>
-		<td>1</td>
-		<td>0</td>
-		<td>1C2</td>
-
-		<td>1</td>
-		<td>0</td>
-		<td>1</td>
-		<td>0</td>
-		<td>2C2</td>
-		
-
-	</tr>
-	<tr>
-		<td>0</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1C3</td>
-		
-		<td>1</td>
-		<td>0</td>
-		<td>1</td>
-		<td>1</td>
-		<td>2C3</td>
-	</tr>
+		<tr><th colspan="4">A</th><th colspan="4">B</th><th colspan="5">Sum</th></tr>
+		<tr><th>\(A_3\)</th><th>\(A_2\)</th><th>\(A_1\)</th><th>\(A_0\)</th><th>\(B_3\)</th><th>\(B_2\)</th><th>\(B_1\)</th><th>\(B_0\)</th><th>\(C_4\)</th><th>\(S_3\)</th><th>\(S_2\)</th><th>\(S_1\)</th><th>\(S_0\)</th></tr>
 		</table>
 		</center>
 			</div>
@@ -181,11 +81,11 @@ th, td {
 		
 	<div id="showalt" class="dropdown-content" style="background-color:white;  border:1px solid #3385ff; visibility: hidden;" >
 		<p class="con" id="msg" ></p>
-    \(A_3 A_2 A_1 A_0\) &nbsp; &nbsp; \(B_3 B_2 B_1 B_0\)&nbsp; &nbsp; \(C_4 S_3 S_2 S_1 S_0\)<br>
-	<input type="text" value="" id='binaryinpA' placeholder="Binary input"  style="background-color:#e6f5ff; width:50px;" readonly/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+		<button id="tbl" onclick="addtotable()">Add to Table</button><br>
+   \(A_3 A_2 A_1 A_0\) &nbsp; &nbsp; \(B_3 B_2 B_1 B_0\)&nbsp; &nbsp; \(C_4 S_3 S_2 S_1 S_0\)<br>
+	<input type="text" value="" id='binaryinpA' placeholder="Binary input"  style="background-color:#e6f5ff; width:50px; " readonly/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
 	<input type="text" value="" id='binaryinpB' placeholder="Binary input"  style="background-color:#e6f5ff;width:50px;" readonly/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
 	<input type="text" value="" id='binaryinpS' placeholder="Binary input"  style="background-color:#e6f5ff;width:50px;" readonly/>
-			
 	</div>
 
 </div>

@@ -3,7 +3,13 @@
     Author:Sukriti Dhang*/
 
 var dec_valueA=0,dec_valueB=0;
-
+var tabrowindex = 1;
+var arr = [];
+var table;
+var Ainp3=0, Ainp2=0, Ainp1=0, Ainp0=0; 
+var Binp3=0, Binp2=0, Binp1=0, Binp0=0;
+var c4=0;
+var s3, s2, s1, s0;
 
 function ledchng(){
 
@@ -483,6 +489,12 @@ function binarytodecimal_A(){
 	dec_valueA=bin_to_dec(bstrA);
 	//alert(dec_valueA);
 	//document.getElementById("decimalinp").value=dec_value;
+/*	var binarya= bstrA.split("");
+
+	 Ainp3=binarya[0];
+	 Ainp2=binarya[1];
+	 Ainp1=binarya[2];
+	 Ainp0=binarya[3];*/
 }
 
 function binarytodecimal_B(){
@@ -494,6 +506,12 @@ function binarytodecimal_B(){
 	dec_valueB=bin_to_dec(bstrB);
 	//alert(dec_valueB);
 	//document.getElementById("decimalinp").value=dec_value;
+	/*var binaryb= bstrB.split("");
+
+	 Binp3=binaryb[0];
+	 Binp2=binaryb[1];
+	 Binp1=binaryb[2];
+	 Binp0=binaryb[3];*/
 }
 
 function decA_add_decB(){
@@ -543,11 +561,11 @@ function convertToBinary(dec_sum) {
 	    // alert(binaryStr2);
 		
 		document.getElementById("binaryinpS").value = binaryStrFinal;
-		var c4=binaryStr2[0];
-		var s3=binaryStr2[1];
-		var s2=binaryStr2[2];
-		var s1=binaryStr2[3];
-		var s0=binaryStr2[4];
+		 c4=binaryStr2[0];
+		 s3=binaryStr2[1];
+		 s2=binaryStr2[2];
+		 s1=binaryStr2[3];
+		 s0=binaryStr2[4];
 		
 		if(c4==1 && s3==0){
 		
@@ -598,5 +616,49 @@ function convertToBinary(dec_sum) {
 			document.getElementById("s3c4onon").src="s3c4.png";
 			document.getElementById("s3c4onon").style.visibility = 'hidden';
 		}
+		
+}
+
+function addtotable(){
+	//arr[0] = tabrowindex + 1;
+    inputa = document.getElementById("binaryinpA").value.split("");
+    inputb = document.getElementById("binaryinpB").value.split("");
+    outputsum = document.getElementById("binaryinpS").value.split("");
+
+   arr[0]=inputa[0];
+   arr[1]=inputa[1];
+   arr[2]=inputa[2];
+   arr[3]=inputa[3];
+   arr[4]=inputb[0];
+   arr[5]=inputb[1];
+   arr[6]=inputb[2];
+   arr[7]=inputb[3];
+   arr[8]=outputsum[0];
+   arr[9]=outputsum[1];
+   arr[10]=outputsum[2];
+   arr[11]=outputsum[3];
+   arr[12]=outputsum[4];
+
+
+	
+	table = document.getElementById("mytable");
+        
+        var row = table.insertRow(++tabrowindex); // Row increment
+        for (var q = 0; q < 13; q++) {
+
+            var cell = row.insertCell(q);
+            cell.innerHTML = arr[q];
+
+        }
+
+/*for(r=0;r<13;r++)
+		clmns = table.rows[tabrowindex].cells[r];
+		vlt = clmns.innerHTML;
+
+		if (clmns == arr[r]) {
+			
+			document.getElementById("msg").innerHTML = "Change the input combination";
+		
+		}*/
 	
 }
