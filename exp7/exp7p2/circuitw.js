@@ -6,8 +6,8 @@ var dec_valueA=0,dec_valueB=0;
 var tabrowindex = 1;
 var arr = [];
 var table;
-var Ainp3=0, Ainp2=0, Ainp1=0, Ainp0=0; 
-var Binp3=0, Binp2=0, Binp1=0, Binp0=0;
+var Ainp7=0, Ainp6=0, Ainp5=0, Ainp4=0, Ainp3=0, Ainp2=0, Ainp1=0, Ainp0=0; 
+var Binp7=0, Binp6=0, Binp5=0, Binp4=0, Binp3=0, Binp2=0, Binp1=0, Binp0=0;
 var c4=0;
 var s3, s2, s1, s0;
 
@@ -19,7 +19,7 @@ function ledchng(){
     var image4 = document.getElementById('b4');		/*	B2  */
     var image5 = document.getElementById('b5'); 	/*  A2 */
     var image6 = document.getElementById('b6'); 	/*  A3 */
-    var image7 = document.getElementById('b7'); 	/*  B4 */
+    var image7 = document.getElementById('b7'); 	/*  B3 */
     var image8 = document.getElementById('b8'); 	/*	C0  */
     var image9 = document.getElementById('b9');  	/*  GND */
     var image10 = document.getElementById('b10');   /*  B0 */
@@ -31,7 +31,7 @@ function ledchng(){
     var image15 = document.getElementById('b15'); 	/*  B2 */   /* B6 */
     var image16 = document.getElementById('b16'); 	/*  A2 */   /* A6 */
     var image17 = document.getElementById('b17'); 	/*  A3 */	/* A7 */
-    var image18 = document.getElementById('b18'); 	/*	B3  */	/* A7 */
+    var image18 = document.getElementById('b18'); 	/*	B3  */	/* B7 */
     var image19 = document.getElementById('b19');  	/*  C0 */
     var image20 = document.getElementById('b20');   /* GND */
     var image21 = document.getElementById('b21');	/*	B0  */ /* B4 */
@@ -46,7 +46,7 @@ function ledchng(){
 if(image3.src.match("on") && image9.src.match("off") && image20.src.match("off") && image14.src.match("on") ){
 	document.getElementById("msg").innerHTML = 'VCC and GND are properly connected';
 	document.getElementById("showalt").style.visibility = 'visible';
-   
+    document.getElementById("msg").style.color="green";
 }
 /*else if(image3.src.match("on")  && image14.src.match("on") ){
 	document.getElementById("msg").innerHTML = 'VCC and GND are properly connected';
@@ -56,43 +56,49 @@ if(image3.src.match("on") && image9.src.match("off") && image20.src.match("off")
        else if(image9.src.match("on") ){
             document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW for 1st circuit) ';
         document.getElementById("showalt").style.visibility = 'visible';
+        document.getElementById("msg").style.color="red";
        
         }
 		else if(image20.src.match("on") ){
             document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW for 2nd circuit) ';
         document.getElementById("showalt").style.visibility = 'visible';
-       
+        document.getElementById("msg").style.color="red";
         }
 		else if(image9.src.match("on") && image20.src.match("on")){
             document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW) ';
         document.getElementById("showalt").style.visibility = 'visible';
-       
+        document.getElementById("msg").style.color="red";
         }
 		
 		else if(image3.src.match("on") && image9.src.match("on") && image14.src.match("on") && image20.src.match("on")){
 			document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW) ';
 			document.getElementById("showalt").style.visibility = 'visible';
+            document.getElementById("msg").style.color="red";
 		   
 		}
 		else if(image3.src.match("on") && image9.src.match("on") && image14.src.match("on") && image20.src.match("off")){
 			document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW for 1st circuit) ';
 			document.getElementById("showalt").style.visibility = 'visible';
+            document.getElementById("msg").style.color="red";
 		   
 		}
 		else if(image3.src.match("on") && image9.src.match("off") && image14.src.match("on") && image20.src.match("on")){
 			document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW for 2nd circuit) ';
 			document.getElementById("showalt").style.visibility = 'visible';
+            document.getElementById("msg").style.color="red";
 		   
 		}
 	 
 		else  if(image3.src.match("on") && image9.src.match("off") && image20.src.match("off") && image14.src.match("off") ){
             document.getElementById("msg").innerHTML = 'Please connect VCC properly (Make VCC to HIGH for 2nd circuit)';
             document.getElementById("showalt").style.visibility = 'visible';
+            document.getElementById("msg").style.color="red";
            
         }
 		else  if(image3.src.match("off") && image9.src.match("off") && image20.src.match("off") && image14.src.match("on") ){
             document.getElementById("msg").innerHTML = 'Please connect VCC properly (Make VCC to HIGH for 1nd circuit)';
             document.getElementById("showalt").style.visibility = 'visible';
+            document.getElementById("msg").style.color="red";
            
         }
 
@@ -120,202 +126,9 @@ if(image3.src.match("on") && image9.src.match("off") && image20.src.match("off")
 		document.getElementById("s3c4offon").style.visibility = 'hidden';
 	}
 	
-	/* 4 bit adder A3A2A1A0 */
-	if(image6.src.match("off")&&image5.src.match("off")&&image1.src.match("off")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '0000';//0
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("off")&&image1.src.match("off")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '0001';//1
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("off")&&image1.src.match("on")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '0010';//2
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("off")&&image1.src.match("on")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '0011';//3
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("on")&&image1.src.match("off")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '0100';//4
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("on")&&image1.src.match("off")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '0101';//5
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("on")&&image1.src.match("on")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '0110';//6
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("off")&&image5.src.match("on")&&image1.src.match("on")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '0111';//7
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("off")&&image1.src.match("off")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '1000';//8
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("off")&&image1.src.match("off")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '1001';//9
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("off")&&image1.src.match("on")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '1010';//10
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("off")&&image1.src.match("on")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '1011';//11
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("on")&&image1.src.match("off")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '1100';//12
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("on")&&image1.src.match("off")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '1101';//13
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("on")&&image1.src.match("on")&&image11.src.match("off"))
-	{
-		document.getElementById("binaryinpA").value = '1110';//14
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		if(image6.src.match("on")&&image5.src.match("on")&&image1.src.match("on")&&image11.src.match("on"))
-	{
-		document.getElementById("binaryinpA").value = '1111';//15
-		binarytodecimal_A();
-		decA_add_decB();
-		}
-		
-		/* 4 bit adder B3B2B1B0 */
-	if(image7.src.match("off")&&image4.src.match("off")&&image2.src.match("off")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '0000';//0
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("off")&&image2.src.match("off")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '0001';//1
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("off")&&image2.src.match("on")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '0010';//2
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("off")&&image2.src.match("on")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '0011';//3
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("on")&&image2.src.match("off")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '0100';//4
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("on")&&image2.src.match("off")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '0101';//5
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("on")&&image2.src.match("on")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '0110';//6
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("off")&&image4.src.match("on")&&image2.src.match("on")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '0111';//7
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("off")&&image2.src.match("off")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '1000';//8
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("off")&&image2.src.match("off")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '1001';//9
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("off")&&image2.src.match("on")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '1010';//10
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("off")&&image2.src.match("on")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '1011';//11
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("on")&&image2.src.match("off")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '1100';//12
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("on")&&image2.src.match("off")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '1101';//13
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("on")&&image2.src.match("on")&&image10.src.match("off"))
-	{
-		document.getElementById("binaryinpB").value = '1110';//14
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-		if(image7.src.match("on")&&image4.src.match("on")&&image2.src.match("on")&&image10.src.match("on"))
-	{
-		document.getElementById("binaryinpB").value = '1111';//15
-		binarytodecimal_B();
-		decA_add_decB();
-		}
-}
+	generate8bitbinary();
+    decA_add_decB();
+} /*ledchng ends here*/
 
 
 /*switch on off*/
@@ -329,14 +142,14 @@ function a1() {
     document.getElementById('b1r').style.display="none";
     document.getElementById('b1g').style.display="block";
 
-   // var a1=1;	
+    Ainp5=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b1r').style.display="block";
     document.getElementById('b1g').style.display="none";
-   // var a1=0;
+     Ainp5=0;
     }
 ledchng();
 }
@@ -347,14 +160,14 @@ function a2() {
     image.src = "on.png";
     document.getElementById('b2r').style.display="none";
     document.getElementById('b2g').style.display="block";
-    //var i1='1'	;	
+    Binp5=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b2r').style.display="block";
     document.getElementById('b2g').style.display="none";
-    //var i1='0';
+    Binp5=0;
     }
     ledchng();
 }
@@ -365,14 +178,14 @@ function a3() {
     image.src = "on.png";
     document.getElementById('b3r').style.display="none";
     document.getElementById('b3g').style.display="block";
-    //var i1='1'	;	
+   	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b3r').style.display="block";
     document.getElementById('b3g').style.display="none";
-    //var i1='0';
+   
     }
     ledchng();
 }
@@ -383,14 +196,14 @@ function a4() {
     image.src = "on.png";
     document.getElementById('b4r').style.display="none";
     document.getElementById('b4g').style.display="block";
-    //var i1='1'	;	
+    Binp6=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b4r').style.display="block";
     document.getElementById('b4g').style.display="none";
-    //var i1='0';
+    Binp6=0;
     }
     ledchng();
 }
@@ -402,14 +215,14 @@ function a5() {
     image.src = "on.png";
     document.getElementById('b5r').style.display="none";
     document.getElementById('b5g').style.display="block";
-    //var i1='1'	;	
+    Ainp6=1;
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b5r').style.display="block";
     document.getElementById('b5g').style.display="none";
-    //var i1='0';
+    Ainp6=0;
     }
     ledchng();
 }
@@ -420,14 +233,14 @@ function a6() {
     image.src = "on.png";
     document.getElementById('b6r').style.display="none";
     document.getElementById('b6g').style.display="block";
-    //ar i1='1'	;	
+    Ainp7=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b6r').style.display="block";
     document.getElementById('b6g').style.display="none";
-    //var i1='0';
+    Ainp7=0;
     }
     ledchng();
 }
@@ -438,14 +251,14 @@ function a7() {
     image.src = "on.png";
     document.getElementById('b7r').style.display="none";
     document.getElementById('b7g').style.display="block";
-    //var i1='1'	;	
+    Binp7=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b7r').style.display="block";
     document.getElementById('b7g').style.display="none";
-    //var i1='0';
+    Binp7=0;
     }
     ledchng();
 }
@@ -456,14 +269,14 @@ function a8() {
     image.src = "on.png";
     document.getElementById('b8r').style.display="none";
     document.getElementById('b8g').style.display="block";
-    //var i1='1'	;	
+  	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b8r').style.display="block";
     document.getElementById('b8g').style.display="none";
-    //var i1='0';
+  
     }
     ledchng();
 }
@@ -474,14 +287,14 @@ function a9() {
     image.src = "on.png";
     document.getElementById('b9r').style.display="none";
     document.getElementById('b9g').style.display="block";
-    //var i1='1'	;	
+   
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b9r').style.display="block";
     document.getElementById('b9g').style.display="none";
-    //var i1='0';
+   
     }
     ledchng();
 }
@@ -492,14 +305,14 @@ function a10() {
     image.src = "on.png";
     document.getElementById('b10r').style.display="none";
     document.getElementById('b10g').style.display="block";
-    //var i1='1'	;	
+    Binp4=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b10r').style.display="block";
     document.getElementById('b10g').style.display="none";
-    //var i1='0';
+    Binp4=0;
     }
     ledchng();
 }
@@ -510,14 +323,14 @@ function a11() {
     image.src = "on.png";
     document.getElementById('b11r').style.display="none";
     document.getElementById('b11g').style.display="block";
-    //var i1='1'	;	
+    Ainp4=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b11r').style.display="block";
     document.getElementById('b11g').style.display="none";
-    //var i1='0';
+    Ainp4=0;
     }
     ledchng();
 }
@@ -530,14 +343,14 @@ function a12() {
     document.getElementById('b12r').style.display="none";
     document.getElementById('b12g').style.display="block";
 
-   // var a1=1;	
+    Ainp1=1;
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b12r').style.display="block";
     document.getElementById('b12g').style.display="none";
-   // var a1=0;
+    Ainp1=0;
     }
 ledchng();
 }
@@ -548,14 +361,14 @@ function a13() {
     image.src = "on.png";
     document.getElementById('b13r').style.display="none";
     document.getElementById('b13g').style.display="block";
-    //var i1='1'	;	
+    Binp1=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b13r').style.display="block";
     document.getElementById('b13g').style.display="none";
-    //var i1='0';
+    Binp1=0;
     }
     ledchng();
 }
@@ -567,14 +380,14 @@ function a14() {
     image.src = "on.png";
     document.getElementById('b14r').style.display="none";
     document.getElementById('b14g').style.display="block";
-    //var i1='1'	;	
+   
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b14r').style.display="block";
     document.getElementById('b14g').style.display="none";
-    //var i1='0';
+  
     }
     ledchng();
 }
@@ -586,14 +399,14 @@ function a15() {
     image.src = "on.png";
     document.getElementById('b15r').style.display="none";
     document.getElementById('b15g').style.display="block";
-    //var i1='1'	;	
+    Binp2=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b15r').style.display="block";
     document.getElementById('b15g').style.display="none";
-    //var i1='0';
+    Binp2=0;
     }
     ledchng();
 }
@@ -604,14 +417,14 @@ function a16() {
     image.src = "on.png";
     document.getElementById('b16r').style.display="none";
     document.getElementById('b16g').style.display="block";
-    //ar i1='1'	;	
+    Ainp2=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b16r').style.display="block";
     document.getElementById('b16g').style.display="none";
-    //var i1='0';
+    Ainp2=0;
     }
     ledchng();
 }
@@ -622,14 +435,14 @@ function a17() {
     image.src = "on.png";
     document.getElementById('b17r').style.display="none";
     document.getElementById('b17g').style.display="block";
-    //var i1='1'	;	
+    Ainp3=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b17r').style.display="block";
     document.getElementById('b17g').style.display="none";
-    //var i1='0';
+    Ainp3=0;
     }
     ledchng();
 }
@@ -640,14 +453,14 @@ function a18() {
     image.src = "on.png";
     document.getElementById('b18r').style.display="none";
     document.getElementById('b18g').style.display="block";
-    //var i1='1'	;	
+    Binp3=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b18r').style.display="block";
     document.getElementById('b18g').style.display="none";
-    //var i1='0';
+    Binp3=0;
     }
     ledchng();
 }
@@ -658,14 +471,14 @@ function a19() {
     image.src = "on.png";
     document.getElementById('b19r').style.display="none";
     document.getElementById('b19g').style.display="block";
-    //var i1='1'	;	
+    	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b19r').style.display="block";
     document.getElementById('b19g').style.display="none";
-    //var i1='0';
+  
     }
     ledchng();
 }
@@ -676,14 +489,14 @@ function a20() {
     image.src = "on.png";
     document.getElementById('b20r').style.display="none";
     document.getElementById('b20g').style.display="block";
-    //var i1='1'	;	
+   	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b20r').style.display="block";
     document.getElementById('b20g').style.display="none";
-    //var i1='0';
+   
     }
     ledchng();
 }
@@ -694,14 +507,14 @@ function a21() {
     image.src = "on.png";
     document.getElementById('b21r').style.display="none";
     document.getElementById('b21g').style.display="block";
-    //var i1='1'	;	
+    Binp0=1;	
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b21r').style.display="block";
     document.getElementById('b21g').style.display="none";
-    //var i1='0';
+    Binp0=0;
     }
     ledchng();
 }
@@ -712,19 +525,31 @@ function a22() {
     image.src = "on.png";
     document.getElementById('b22r').style.display="none";
     document.getElementById('b22g').style.display="block";
-    //var i1='1'	;	
+    Ainp0=1;
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b22r').style.display="block";
     document.getElementById('b22g').style.display="none";
-    //var i1='0';
+    Ainp0=0;
     }
     ledchng();
 }
 
-
+/*generate 8bit input A combination*/
+function generate8bitbinary(){
+    var A=[];
+    var B=[];
+     A.push(Ainp7,Ainp6,Ainp5,Ainp4,Ainp3,Ainp2,Ainp1,Ainp0);
+     B.push(Binp7,Binp6,Binp5,Binp4,Binp3,Binp2,Binp1,Binp0);
+     var binpA= A.join("");
+     var binpB= B.join("");
+     document.getElementById("binaryinpA").value=binpA;
+     document.getElementById("binaryinpB").value=binpB;
+     binarytodecimal_A();
+     binarytodecimal_B();
+}
 
 /* binary to decimal conversion*/
 
@@ -737,12 +562,6 @@ function binarytodecimal_A(){
 	dec_valueA=bin_to_dec(bstrA);
 	//alert(dec_valueA);
 	//document.getElementById("decimalinp").value=dec_value;
-/*	var binarya= bstrA.split("");
-
-	 Ainp3=binarya[0];
-	 Ainp2=binarya[1];
-	 Ainp1=binarya[2];
-	 Ainp0=binarya[3];*/
 }
 
 function binarytodecimal_B(){
@@ -754,12 +573,6 @@ function binarytodecimal_B(){
 	dec_valueB=bin_to_dec(bstrB);
 	//alert(dec_valueB);
 	//document.getElementById("decimalinp").value=dec_value;
-	/*var binaryb= bstrB.split("");
-
-	 Binp3=binaryb[0];
-	 Binp2=binaryb[1];
-	 Binp1=binaryb[2];
-	 Binp0=binaryb[3];*/
 }
 
 function decA_add_decB(){
@@ -785,7 +598,7 @@ function convertToBinary(dec_sum) {
     console.log(`Binary: ${bin}`);*/
 	
 		 var binary = "";
-		 for(i=0;i<5;i++)
+		 for(i=0;i<9;i++)
 		 { 
 		  var remainder = dec_sum % 2;
 			 
@@ -809,22 +622,61 @@ function convertToBinary(dec_sum) {
 	    // alert(binaryStr2);
 		
 		document.getElementById("binaryinpS").value = binaryStrFinal;
-		 c4=binaryStr2[0];
-		 s3=binaryStr2[1];
-		 s2=binaryStr2[2];
-		 s1=binaryStr2[3];
-		 s0=binaryStr2[4];
+
+		 c8=binaryStr2[0];
+		 s7=binaryStr2[1];
+		 s6=binaryStr2[2];
+		 s5=binaryStr2[3];
+		 s4=binaryStr2[4];        
+		 s3=binaryStr2[5];
+		 s2=binaryStr2[6];
+		 s1=binaryStr2[7];
+		 s0=binaryStr2[8];
 		
-		if(c4==1 && s3==0){
 		
-			document.getElementById("s3c4offon").src="s3c4_on.png";
-			document.getElementById("s3c4offon").style.visibility = 'visible';
+    
+        if(c8==1 && s7==0){
+		
+			document.getElementById("s7c8offon").src="s7c8_on.png";
+			document.getElementById("s7c8offon").style.visibility = 'visible';
 		}
 		else
-			{document.getElementById("s3c4offon").src="s3c4_on.png";
-			document.getElementById("s3c4offon").style.visibility = 'hidden';
+			{document.getElementById("s7c8offon").src="s7c8_on.png";
+			document.getElementById("s7c8offon").style.visibility = 'hidden';
 		}
-		if(s3==1&&c4==0){
+		if(s7==1&&c8==0){
+			document.getElementById("s7on").src="s7.png";
+			document.getElementById("s7on").style.visibility = 'visible';
+		}
+		else{
+			document.getElementById("s7on").src="s7.png";
+			document.getElementById("s7on").style.visibility = 'hidden';
+		}
+        if(s6==1){
+			document.getElementById("s6on").src="s6.png";
+			document.getElementById("s6on").style.visibility = 'visible';
+		}
+		else{
+			document.getElementById("s6on").src="s6.png";
+			document.getElementById("s6on").style.visibility = 'hidden';
+		}
+        if(s5==1){
+			document.getElementById("s5on").src="s5.png";
+			document.getElementById("s5on").style.visibility = 'visible';
+		}
+		else{
+			document.getElementById("s5on").src="s5.png";
+			document.getElementById("s5on").style.visibility = 'hidden';
+		}
+        if(s4==1){
+			document.getElementById("s4on").src="s4.png";
+			document.getElementById("s4on").style.visibility = 'visible';
+		}
+		else{
+			document.getElementById("s4on").src="s4.png";
+			document.getElementById("s4on").style.visibility = 'hidden';
+		}
+        if(s3==1){
 			document.getElementById("s3on").src="s3.png";
 			document.getElementById("s3on").style.visibility = 'visible';
 		}
@@ -856,15 +708,15 @@ function convertToBinary(dec_sum) {
 			document.getElementById("s0on").src="s0.png";
 			document.getElementById("s0on").style.visibility = 'hidden';
 		}
-		if(c4==1 && s3==1){
-			document.getElementById("s3c4onon").src="s3c4.png";
-			document.getElementById("s3c4onon").style.visibility = 'visible';
+		if(c8==1 && s7==1){
+			document.getElementById("s7c8onon").src="s7c8.png";
+			document.getElementById("s7c8onon").style.visibility = 'visible';
 		}
 		else{
-			document.getElementById("s3c4onon").src="s3c4.png";
-			document.getElementById("s3c4onon").style.visibility = 'hidden';
+			document.getElementById("s7c8onon").src="s7c8.png";
+			document.getElementById("s7c8onon").style.visibility = 'hidden';
 		}
-		
+	//	addtotable();
 }
 
 function addtotable(){
@@ -877,22 +729,36 @@ function addtotable(){
    arr[1]=inputa[1];
    arr[2]=inputa[2];
    arr[3]=inputa[3];
-   arr[4]=inputb[0];
-   arr[5]=inputb[1];
-   arr[6]=inputb[2];
-   arr[7]=inputb[3];
-   arr[8]=outputsum[0];
-   arr[9]=outputsum[1];
-   arr[10]=outputsum[2];
-   arr[11]=outputsum[3];
-   arr[12]=outputsum[4];
+   arr[4]=inputa[4];
+   arr[5]=inputa[5];
+   arr[6]=inputa[6];
+   arr[7]=inputa[7];
+   arr[8]=inputb[0];
+   arr[9]=inputb[1];
+   arr[10]=inputb[2];
+   arr[11]=inputb[3];
+   arr[12]=inputb[4];
+   arr[13]=inputb[5];
+   arr[14]=inputb[6];
+   arr[15]=inputb[7];
+
+   arr[16]=outputsum[0];
+   arr[17]=outputsum[1];
+   arr[18]=outputsum[2];
+   arr[19]=outputsum[3];
+   arr[20]=outputsum[4];
+   arr[21]=outputsum[5];
+   arr[22]=outputsum[6];
+   arr[23]=outputsum[7];
+   arr[24]=outputsum[8];
+   
 
 
 	
 	table = document.getElementById("mytable");
         
         var row = table.insertRow(++tabrowindex); // Row increment
-        for (var q = 0; q < 13; q++) {
+        for (var q = 0; q < 25; q++) {
 
             var cell = row.insertCell(q);
             cell.innerHTML = arr[q];

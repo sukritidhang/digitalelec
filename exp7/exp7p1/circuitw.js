@@ -32,22 +32,29 @@ function ledchng(){
     if(image3.src.match("on") && image9.src.match("on")){
         document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW) ';
         document.getElementById("showalt").style.visibility = 'visible';
-       
+		document.getElementById("msg").style.color="red";
     }
     
       else  if(image9.src.match("off") && image3.src.match("on") ){
             document.getElementById("msg").innerHTML = 'VCC and GND are properly connected';
             document.getElementById("showalt").style.visibility = 'visible';
-           
+			document.getElementById("msg").style.color="green";
         }
        
         else if(image3.src.match("on") ){
             document.getElementById("msg").innerHTML = 'VCC and GND are properly connected';
             document.getElementById("showalt").style.visibility = 'visible';
+			document.getElementById("msg").style.color="green";
+        }
+		else if(image3.src.match("off") ){
+            document.getElementById("msg").innerHTML = 'Please connect VCC  properly';
+            document.getElementById("showalt").style.visibility = 'visible';
+			document.getElementById("msg").style.color="red";
         }
         else if(image9.src.match("on") ){
             document.getElementById("msg").innerHTML = 'Please connect GND properly (Make GND to LOW) ';
         document.getElementById("showalt").style.visibility = 'visible';
+		document.getElementById("msg").style.color="red";
        
         }
         else{

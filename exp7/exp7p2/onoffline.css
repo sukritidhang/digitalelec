@@ -10,12 +10,12 @@
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 10px;
   
 }
 .column3 {
-    float: left;
+   
     width: 100%;
     padding: 10px;
     
@@ -31,6 +31,9 @@
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .column {
+    width: 100%;
+  }
+  .column3 {
     width: 100%;
   }
   .div{
@@ -49,8 +52,8 @@
     
     /*width:700px;
     height:400px;*/
-	width:100%;
-   
+	width:1325px;
+    
     
 
 }
