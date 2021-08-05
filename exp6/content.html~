@@ -1,0 +1,712 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head><script language="javascript" type="text/javascript" src="a.js"></script>
+        <title>Test Lab title</title>
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="./images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Digital Electronic Circuits</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    Analysis and Synthesis of Boolean Relations using Digital Comparator
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p><b>About the Experiment</b></p>
+                <br />
+                This experiment enables a student to learn
+                <ul>
+                    <li>	How to realize the functionality of IC 7485 which is used to compare magnitudes of two binary numbers.</li>
+                   
+                           
+                           <li>How to realize an eight bit magnitude comparator by cascading two comparator (one is lower nibble comparator,another is higher nibble comparator) </li>
+                  
+                </ul>
+                
+                                            
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                            <div align="left">
+             IC 7485 is used to compare magnitude of two binary numbers .The two 4-bit numbers are applied at the inputs A3,A2,A1,A0 and B3,B2,B1,B0 Where A3 and B3 are the most significant bits of the two 4-bit operands to be Compared.The Three cascading inputs (A = B)<sub>IN</sub>,(A < B)<sub>IN</sub> and (A > B)<sub>IN</sub> should be connected to logic '1'(HIGH),logic '0'(LOW) and logic '0'(LOW) respectively.The Three outputs (A > B)<sub>OUT</sub>,(A = B)<sub>OUT</sub> and (A < B)<sub>OUT</sub> will reflect the results of comparing the two 4-Bit numbers A=A3A2A1A0 and B=B3B2B1B0.
+             <br />
+                            <div align="center">
+                            <img src="images/exp6.jpg" style="width:200px;height:300px"  /> 
+                            <br />
+                            Figure 1
+                            <br /><br />
+                             <br />
+                             </div>
+    
+          The students of virtual DEC Laboratory can verify the functionality of the 7485 chip fully rather than testing for a total of 2<sup>8</sup>=256 inputs,the students can observe the outputs listed in the compressed function table given below.<br />
+                             <br />
+          
+          <br />
+                            <div align="center">
+                            <img src="images/table.jpg" /> 
+                            <br />
+                            Figure 2
+                            <br/>
+                            <br/>
+                            <div align="center" class="big" style="text-decoration:underline" > Part II </div>
+                             <div align="left">
+  Implement an 8-bit magnitude comparator using two 7485 chips.Let A= A7...A0 and B= B7...B0 be the two 8-bit numbers.Note that no external gates are required.  The three outputs of the 7485 comparing the lower nibbles , viz (A > B)<sub>OUT</sub>,(A = B)<sub>OUT</sub> and (A < B)<sub>OUT</sub>  are connected to the corresponding cascading inputs of the 7485 used to compare the higher nibbles.Final results of comparison are obtained at the(A > B)<sub>OUT</sub>,(A = B)<sub>OUT</sub> and (A < B)<sub>OUT</sub> terminals the higher nibble comparator.
+  <br/>
+                            <div align="center">
+                            <img src="images/IM.png" />
+                            </div>                            
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p><b>Aim of the Experiment</b></p>
+                <br />
+               The objective of Part 1 of the experiment is to fully understand the functionality of 4 bit magnitude comparator using 3485 IC and to show how the comparator output changes according to input combinations of two 4 bit binary numbers.<br /><br />
+                           
+                           
+                   The objective of Part 2 of the experiment is to understand the functionality of 8bit magnitude comparator by cascading two four bit magnitude comparator.<br />
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+<section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/procedure.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p><p>Please follow these steps to do the experiment.</p>
+                            <br />
+                            <br />
+                            
+                            <ul style="list-style:none">
+                            
+                              <p class="big" style="text-decoration:underline">NOTE :</p>  <li class="expt1"> To perform this experiment,it is compulsary always to keep V<sub>cc</sub> ON, GND OFF, (A = B)<sub>IN</sub> High, (A < B)<sub>IN</sub> Low and <br  />(A > B)<sub>IN</sub> Low.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/compulsary.png"/>
+                                <br />
+                               
+                                <ul style="list-style:none">
+                            
+                            
+                         
+                        	<ul style="list-style:none">
+                            
+                                <li class="expt1">	1.&nbsp;At first go through the structure of 7485.
+                                Then apply  high level voltage to A3 and low level voltage to B3.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/a1.png"/>
+                                <br />
+                               
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	2.&nbsp;Next, apply  high level voltage to B3 and low level voltage to A3.
+                                
+</li>
+</ul>
+
+ <br />
+                                
+                                <img src="images/a2.png"  />
+                                <br />
+                            	 <ul style="list-style:none">
+                            
+                                <li class="expt1">	3.&nbsp;Next,  apply  high level voltage to A2 and low level voltage to B2 and keep same voltage level to A3 & B3 (Either High or Low)
+                                </li>
+</ul>
+<br />
+
+<img src="images/a3.png"  />
+                                <br />
+
+                                
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	4.&nbsp;Next,  apply  high level voltage to B2 and low level voltage to A2 and keep same voltage level to A3 & B3 (Either High or Low)
+</li>
+</ul>
+<br />
+                                
+   <img src="images/a4.png" />
+                                <br />   
+                                
+                                
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	5.&nbsp;Next,  apply  high level voltage to A1 and low level voltage to B1 and keep same voltage level to A3, B3, A2 and B2   (Either High or Low)
+</li>
+</ul>
+<br />
+                                
+   <img src="images/a5.png"  />
+                                <br /> 
+                                
+                                
+                                 <ul style="list-style:none">
+                            
+                                <li class="expt1">	6.&nbsp;Next,  apply  high level voltage to B1 and low level voltage to A1 and keep same voltage level to A3, B3, A2 and B2   (Either High or Low)
+</li>
+</ul>
+<br />
+                                
+   <img src="images/a6.png"  />
+                                <br /> 
+                                
+                                
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	7.&nbsp;Next,  apply  high level voltage to A0 and low level voltage to B0 and keep same voltage level to A3, B3, A2, B2, A1 and B1 (Either High or Low)
+</li>
+</ul>
+<br />
+                                
+   <img src="images/a7.png"  />
+                                <br />                                        
+                        
+                        
+                        
+                         <ul style="list-style:none">
+                            
+                                <li class="expt1">	8.&nbsp;Next,   apply  high level voltage to B0 and low level voltage to A0 and keep same voltage level to A3, B3, A2, B2, A1 and B1 (Either High or Low)
+</li>
+</ul>
+<br />
+                                
+   <img src="images/a8.png"  />
+                                <br />  
+                                
+                                
+                                 
+                         <ul style="list-style:none">
+                            
+                                <li class="expt1">	9.&nbsp;Next, apply  Same level voltage to A0, B0, A3, B3, A2, B2, A1 and B1 (Either High or Low)
+</ul>
+<br />
+                                
+   <img src="images/a9.png" />
+                                <br />
+<br />
+
+                            
+                                 <p class="biggerblue" align="left">Please follow these steps to do the experiment(Part-II)</p>
+
+<br />
+
+ <ul style="list-style:none">
+ 
+    <li class="expt1"> 1.&nbsp; At first click on the Browse Block button <br/>
+    2.&nbsp; Next, drag the comparator block and drop it onto the bread board.
+    </ul>    
+    <br />
+    </li>                      
+   <img src="images/30.png">
+                                <br />
+                                <img src="images/31.png" />
+                                <br />
+                                <br />
+                                <img src="images/32.png" />
+                                <br />
+                                <br />
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 3.&nbsp;  Next, drag the Bus block and drop it onto the bread board. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                                <img src="images/33.png" />
+                                <br />
+                                <br />
+                                <img src="images/34.png" />
+                                <br />
+                                <br /> 
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 4.&nbsp;  Next, drag the output block and drop it onto the bread board. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/35.png" />
+                                <br />
+                                <br />
+                                <img src="images/1.png" />
+                                <br /> 
+                                <br />
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 5.&nbsp;  Next, make a connection from switch A to B3 of the 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/2.png" />
+                                <br />
+                                <br />
+                                <img src="images/3.png" />
+                                <br /> 
+                                <br />
+                                 <ul style="list-style:none">
+    <li class="expt1"> 5.&nbsp;  Next, make a connection from (A > B)out of the 1st comparator to (A < B)in of the 2nd oparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/4.png" />
+                                <br />
+                                <br />
+                                <img src="images/5.png" />
+                                <br /> 
+                                <br />
+                                <img src="images/6.png" />
+                                <br />
+                                <br />
+                              <ul style="list-style:none">
+    <li class="expt1"> 6.&nbsp;  Next, make a connection from (A > B)out of 2nd comparator to 1st LED... <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/7.png" />
+                                <br />
+                                <br />   
+                                <img src="images/8.png" />
+                                <br />
+                                <br />  
+                                <img src="images/9.png" />
+                                <br />
+                                <br />   
+                                <img src="images/10.png" />
+                                <br />
+                                <br />   
+                                <img src="images/11.png" />
+                                <br />
+                                <br />  
+                                  <ul style="list-style:none">
+    <li class="expt1"> 7.&nbsp;  Overall connection... <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/12.png" />
+                                <br />
+                                <br /> 
+                                 <ul style="list-style:none">
+    <li class="expt1"> 8.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/13.png" />
+                                <br />
+                                <br /> 
+                                 <ul style="list-style:none">
+    <li class="expt1"> 9.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A3 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/14.png" />
+                                <br />
+                                <br /> 
+                                   <ul style="list-style:none">
+    <li class="expt1"> 9.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B3 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/15.png" />
+                                <br />
+                                <br />
+                                <ul style="list-style:none">
+    <li class="expt1"> 10.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A2 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/16.png" />
+                                <br />
+                                <br /> 
+                                <ul style="list-style:none">
+    <li class="expt1"> 11.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B2 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/17.png" />
+                                <br />
+                                <br /> 
+                                 <ul style="list-style:none">
+    <li class="expt1"> 12.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A1 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/18.png" />
+                                <br />
+                                <br /> 
+                                 <ul style="list-style:none">
+    <li class="expt1"> 13.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B1 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/19.png" />
+                                <br />
+                                <br />  
+                                <ul style="list-style:none">
+    <li class="expt1"> 14.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A0 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/20.png" />
+                                <br />
+                                <br /> 
+                                <ul style="list-style:none">
+    <li class="expt1"> 15.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B0 of 2nd comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/21.png" />
+                                <br />
+                                <br /> 
+                                <ul style="list-style:none">
+    <li class="expt1"> 16.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A3 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/22.png" />
+                                <br />
+                                <br />
+                                 <ul style="list-style:none">
+    <li class="expt1"> 17.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B3 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/23.png" />
+                                <br />
+                                <br />  
+                                 <ul style="list-style:none">
+    <li class="expt1"> 18.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A2 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/24.png" />
+                                <br />
+                                <br /> 
+                                 <ul style="list-style:none">
+    <li class="expt1"> 19.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B2 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/25.png" />
+                                <br />
+                                <br />                                        <ul style="list-style:none">
+    <li class="expt1"> 20.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A1 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/26.png" />
+                                <br />
+                                <br />   
+                                 <ul style="list-style:none">
+    <li class="expt1"> 21.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B1 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/27.png" />
+                                <br />
+                                <br /> 
+                                <ul style="list-style:none">
+    <li class="expt1"> 22.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the A0 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/28.png" />
+                                <br />
+                                <br /> 
+                                 <ul style="list-style:none">
+    <li class="expt1"> 23.&nbsp;  Switch on the Vcc of the 1st & 2nd comparator & switch on the B0 of 1st comparator.. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/29.png" />
+                                <br />
+                                <br />                            
+                        </div>
+                    </section>
+                    
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+<section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator</div>
+                        
+<div align="left">
+                        
+                            	<table width="100%" cellpadding="0px" cellspacing="0px" border="0px">
+                                
+                                	<!--<tr height="30px">
+                                    	<td colspan="2" valign="top"><p class="medium_black">Results Tabulation</p></td>
+                                    </tr> -->
+                                
+                                	<tr height="30px">
+                                    	<td align="left" style="padding-left:35px;">
+                                        	
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        <div id="help1">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help.html','helpWindow','width=850,height=580,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            <div id="help2" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help1.html','helpWindow','width=850,height=2000,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr height="15px"><td colspan="2"></td></tr>
+                                                     
+                                	<tr height="30px">
+                                    
+                                    	<td align="left" style="padding-left:35px;">
+                                        	<input type="button" name="part1" value="Part 1" class="btn_sub1" onclick="showDiv('1');" />
+                                            &nbsp;&nbsp;
+                                        	<input type="button" name="part2" value="Part 2" class="btn_sub1" onclick="showDiv('2');" />
+                                           
+                                            
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        </td>
+                                        
+                                    </tr>
+                                                              
+                                </table>
+                                
+                        
+                        
+                    	<div align="center" id="part1Div">
+                        
+                        <div align="center"><p class="faqs">Part 1 of the Experiment</p></div>
+                        
+                          <object width="800" height="820">
+                              <param name="movie" value="content/expt1.swf">
+                              <embed src="content/expt1.swf" width="800" height="820">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                    	<div align="center" id="part2Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 2 of the Experiment</p></div>
+                        
+                         <object width="800" height="600">
+                              <param name="movie" value="content/expt2.swf">
+                              <embed src="content/expt2.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                        
+                      
+                          
+                        </div>  
+                    </section>
+                    
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    
+                    <!-------------------------- Seventh section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-7-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-7-heading">
+                            Quizzes
+                        </div>
+
+                        <div class="content" id="experiment-article-section-7-content">                            
+                            <p>Not now</p>                           
+                        </div>
+                    </section>
+                    <!-------------------------- Eight section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-8">
+                        <div class="icon" id="experiment-article-section-8-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-8-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-8-content">                            
+                            <li>Digital Principles and Applications, by Leach and Malvino.</li>
+                                <li>Digital Logic Design, Leach, by Malvino, and Saha</li>
+                                <li>Engineering Digital Design, by Richard F. Tinder.</li>
+                                <li>Digital Logic and Computer Design, by M. Morris Mano</li>                                
+                            	<li>Digital Systems: Principles and Applications, Neal S. Widmer , Ronald J. Tocci , Gregory L. Moss</li>                            
+                        </div>
+                    </section>                   
+
+                </div>
+            </article>
+<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
