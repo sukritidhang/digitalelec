@@ -73,7 +73,7 @@ else if(image6.src.match("on") && image1.src.match("on")){
         else{
            
             document.getElementById("showalt").style.visibility = 'hidden';
-            ument.getElementById("ledonup").style.visibility = 'hidden';
+            document.getElementById("ledonup").style.visibility = 'hidden';
 		document.getElementById("ledonmiddle").src="ledon1.png";
 		document.getElementById("ledonmiddle").style.visibility = 'hidden';
         document.getElementById("ledonbottom").src="ledon2.png";
