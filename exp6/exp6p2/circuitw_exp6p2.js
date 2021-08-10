@@ -646,8 +646,6 @@ function addtotable(){
    arr[18]=outputcompare[2];
   
 
-
-	
 	table = document.getElementById("mytable");
         
         var row = table.insertRow(++tabrowindex); // Row increment
