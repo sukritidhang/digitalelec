@@ -144,15 +144,15 @@ function a2() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b2r').style.display="none";
-    document.getElementById('b2g').style.display="block";
+    document.getElementById('b5r').style.display="none";
+    document.getElementById('b5g').style.display="block";
     Binp7=1	;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b2r').style.display="block";
-    document.getElementById('b2g').style.display="none";
+    document.getElementById('b5r').style.display="block";
+    document.getElementById('b5g').style.display="none";
     Binp7=0	;
     }
     ledchng();
@@ -162,15 +162,15 @@ function a3() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b3r').style.display="none";
-    document.getElementById('b3g').style.display="block";
+    document.getElementById('b6r').style.display="none";
+    document.getElementById('b6g').style.display="block";
   	
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b3r').style.display="block";
-    document.getElementById('b3g').style.display="none";
+    document.getElementById('b6r').style.display="block";
+    document.getElementById('b6g').style.display="none";
     
     }
     ledchng();
@@ -180,15 +180,15 @@ function a4() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b4r').style.display="none";
-    document.getElementById('b4g').style.display="block";
+    document.getElementById('b7r').style.display="none";
+    document.getElementById('b7g').style.display="block";
     Ainp7=1	;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b4r').style.display="block";
-    document.getElementById('b4g').style.display="none";
+    document.getElementById('b7r').style.display="block";
+    document.getElementById('b7g').style.display="none";
     Ainp7=0	;
     }
     ledchng();
@@ -199,15 +199,15 @@ function a5() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b5r').style.display="none";
-    document.getElementById('b5g').style.display="block";
+    document.getElementById('b8r').style.display="none";
+    document.getElementById('b8g').style.display="block";
     Binp6=1	;	
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b5r').style.display="block";
-    document.getElementById('b5g').style.display="none";
+    document.getElementById('b8r').style.display="block";
+    document.getElementById('b8g').style.display="none";
     Binp6=0;
     }
     ledchng();
@@ -217,15 +217,15 @@ function a6() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b6r').style.display="none";
-    document.getElementById('b6g').style.display="block";
+    document.getElementById('b9r').style.display="none";
+    document.getElementById('b9g').style.display="block";
     Ainp6=1	;	
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b6r').style.display="block";
-    document.getElementById('b6g').style.display="none";
+    document.getElementById('b9r').style.display="block";
+    document.getElementById('b9g').style.display="none";
     Ainp6=0	;
     }
     ledchng();
@@ -235,15 +235,15 @@ function a7() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b7r').style.display="none";
-    document.getElementById('b7g').style.display="block";
+    document.getElementById('b10r').style.display="none";
+    document.getElementById('b10g').style.display="block";
     Ainp5=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b7r').style.display="block";
-    document.getElementById('b7g').style.display="none";
+    document.getElementById('b10r').style.display="block";
+    document.getElementById('b10g').style.display="none";
     Ainp5=0;
     }
     ledchng();
@@ -253,15 +253,15 @@ function a8() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b8r').style.display="none";
-    document.getElementById('b8g').style.display="block";
+    document.getElementById('b11r').style.display="none";
+    document.getElementById('b11g').style.display="block";
    Binp5=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b8r').style.display="block";
-    document.getElementById('b8g').style.display="none";
+    document.getElementById('b11r').style.display="block";
+    document.getElementById('b11g').style.display="none";
     Binp5=0;
     }
     ledchng();
@@ -271,15 +271,15 @@ function a9() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b9r').style.display="none";
-    document.getElementById('b9g').style.display="block";
+    document.getElementById('b12r').style.display="none";
+    document.getElementById('b12g').style.display="block";
     Ainp4=1;	
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b9r').style.display="block";
-    document.getElementById('b9g').style.display="none";
+    document.getElementById('b12r').style.display="block";
+    document.getElementById('b12g').style.display="none";
     Ainp4=0;
     }
     ledchng();
@@ -289,15 +289,15 @@ function a10() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b10r').style.display="none";
-    document.getElementById('b10g').style.display="block";
+    document.getElementById('b13r').style.display="none";
+    document.getElementById('b13g').style.display="block";
 	Binp4=1;	
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b10r').style.display="block";
-    document.getElementById('b10g').style.display="none";
+    document.getElementById('b13r').style.display="block";
+    document.getElementById('b13g').style.display="none";
 	Binp4=0;
     }
     ledchng();
@@ -307,15 +307,15 @@ function a11() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b11r').style.display="none";
-    document.getElementById('b11g').style.display="block";
+    document.getElementById('b14r').style.display="none";
+    document.getElementById('b14g').style.display="block";
 		
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b11r').style.display="block";
-    document.getElementById('b11g').style.display="none";
+    document.getElementById('b14r').style.display="block";
+    document.getElementById('b14g').style.display="none";
     
     }
     ledchng();
@@ -325,15 +325,15 @@ function a12() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b12r').style.display="none";
-    document.getElementById('b12g').style.display="block";
+    document.getElementById('b15r').style.display="none";
+    document.getElementById('b15g').style.display="block";
 		
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b12r').style.display="block";
-    document.getElementById('b12g').style.display="none";
+    document.getElementById('b15r').style.display="block";
+    document.getElementById('b15g').style.display="none";
     
     }
     ledchng();
@@ -343,64 +343,9 @@ function a13() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b13r').style.display="none";
-    document.getElementById('b13g').style.display="block";
-		
-    } 
-else
-{
-    image.src = "off.png";
-    document.getElementById('b13r').style.display="block";
-    document.getElementById('b13g').style.display="none";
-    
-    }
-    ledchng();
-}
-function a14() {
-    var image = document.getElementById('b14');		
-    if (image.src.match("off")) 
-{
-    image.src = "on.png";
-    document.getElementById('b14r').style.display="none";
-    document.getElementById('b14g').style.display="block";
-   
-    } 
-else
-{
-    image.src = "off.png";
-    document.getElementById('b14r').style.display="block";
-    document.getElementById('b14g').style.display="none";
-  
-    }
-    ledchng();
-}
-
-function a15() {
-    var image = document.getElementById('b15');		
-    if (image.src.match("off")) 
-{
-    image.src = "on.png";
-    document.getElementById('b15r').style.display="none";
-    document.getElementById('b15g').style.display="block";
-    Binp3=1;	
-    } 
-else
-{
-    image.src = "off.png";
-    document.getElementById('b15r').style.display="block";
-    document.getElementById('b15g').style.display="none";
-    Binp3=0;
-    }
-    ledchng();
-}
-function a16() {
-    var image = document.getElementById('b16');		
-    if (image.src.match("off")) 
-{
-    image.src = "on.png";
     document.getElementById('b16r').style.display="none";
     document.getElementById('b16g').style.display="block";
-    	
+		
     } 
 else
 {
@@ -411,20 +356,75 @@ else
     }
     ledchng();
 }
-function a17() {
-    var image = document.getElementById('b17');		
+function a14() {
+    var image = document.getElementById('b14');		
     if (image.src.match("off")) 
 {
     image.src = "on.png";
     document.getElementById('b17r').style.display="none";
     document.getElementById('b17g').style.display="block";
-    Ainp3=1;	
+   
     } 
 else
 {
     image.src = "off.png";
     document.getElementById('b17r').style.display="block";
     document.getElementById('b17g').style.display="none";
+  
+    }
+    ledchng();
+}
+
+function a15() {
+    var image = document.getElementById('b15');		
+    if (image.src.match("off")) 
+{
+    image.src = "on.png";
+    document.getElementById('b18r').style.display="none";
+    document.getElementById('b18g').style.display="block";
+    Binp3=1;	
+    } 
+else
+{
+    image.src = "off.png";
+    document.getElementById('b18r').style.display="block";
+    document.getElementById('b18g').style.display="none";
+    Binp3=0;
+    }
+    ledchng();
+}
+function a16() {
+    var image = document.getElementById('b16');		
+    if (image.src.match("off")) 
+{
+    image.src = "on.png";
+    document.getElementById('b19r').style.display="none";
+    document.getElementById('b19g').style.display="block";
+    	
+    } 
+else
+{
+    image.src = "off.png";
+    document.getElementById('b19r').style.display="block";
+    document.getElementById('b19g').style.display="none";
+    
+    }
+    ledchng();
+}
+function a17() {
+    var image = document.getElementById('b17');		
+    if (image.src.match("off")) 
+{
+    image.src = "on.png";
+    document.getElementById('b20r').style.display="none";
+    document.getElementById('b20g').style.display="block";
+    Ainp3=1;	
+    } 
+else
+{
+    image.src = "off.png";
+    document.getElementById('b20r').style.display="block";
+    document.getElementById('b20g').style.display="none";
     Ainp3=0;
     }
     ledchng();
@@ -434,15 +434,15 @@ function a18() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b18r').style.display="none";
-    document.getElementById('b18g').style.display="block";
+    document.getElementById('b21r').style.display="none";
+    document.getElementById('b21g').style.display="block";
     Binp2=1;	
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b18r').style.display="block";
-    document.getElementById('b18g').style.display="none";
+    document.getElementById('b21r').style.display="block";
+    document.getElementById('b21g').style.display="none";
     Binp2=0;
     }
     ledchng();
@@ -452,15 +452,15 @@ function a19() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b19r').style.display="none";
-    document.getElementById('b19g').style.display="block";
+    document.getElementById('b22r').style.display="none";
+    document.getElementById('b22g').style.display="block";
     Ainp2=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b19r').style.display="block";
-    document.getElementById('b19g').style.display="none";
+    document.getElementById('b22r').style.display="block";
+    document.getElementById('b22g').style.display="none";
     Ainp2=0;
     }
     ledchng();
@@ -470,15 +470,15 @@ function a20() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b20r').style.display="none";
-    document.getElementById('b20g').style.display="block";
+    document.getElementById('b23r').style.display="none";
+    document.getElementById('b23g').style.display="block";
     Ainp1=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b20r').style.display="block";
-    document.getElementById('b20g').style.display="none";
+    document.getElementById('b23r').style.display="block";
+    document.getElementById('b23g').style.display="none";
     Ainp1=0;
     }
     ledchng();
@@ -488,15 +488,15 @@ function a21() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b21r').style.display="none";
-    document.getElementById('b21g').style.display="block";
+    document.getElementById('b24r').style.display="none";
+    document.getElementById('b24g').style.display="block";
     Binp1=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b21r').style.display="block";
-    document.getElementById('b21g').style.display="none";
+    document.getElementById('b24r').style.display="block";
+    document.getElementById('b24g').style.display="none";
     Binp1=0;
     }
     ledchng();
@@ -506,15 +506,15 @@ function a22() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b22r').style.display="none";
-    document.getElementById('b22g').style.display="block";
+    document.getElementById('b25r').style.display="none";
+    document.getElementById('b25g').style.display="block";
     Ainp0=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b22r').style.display="block";
-    document.getElementById('b22g').style.display="none";
+    document.getElementById('b25r').style.display="block";
+    document.getElementById('b25g').style.display="none";
     Ainp0=0;
     }
     ledchng();
@@ -524,15 +524,15 @@ function a23() {
     if (image.src.match("off")) 
 {
     image.src = "on.png";
-    document.getElementById('b23r').style.display="none";
-    document.getElementById('b23g').style.display="block";
+    document.getElementById('b26r').style.display="none";
+    document.getElementById('b26g').style.display="block";
     Binp0=1;
     } 
 else
 {
     image.src = "off.png";
-    document.getElementById('b23r').style.display="block";
-    document.getElementById('b23g').style.display="none";
+    document.getElementById('b26r').style.display="block";
+    document.getElementById('b26g').style.display="none";
     Binp0=0;
     }
     ledchng();
